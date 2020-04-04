@@ -10,6 +10,7 @@ Para ejecutar este proyecto debes tener **http-server** instaldo (y, por ende, t
 ```java
 $ http-server mytutorial
 ```
+Abrir el navegador web en http://localhost:8080
 
 En caso de que no lo tengas instalado lo puedes hacer así:
 ```java
