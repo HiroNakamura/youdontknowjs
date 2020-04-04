@@ -15,11 +15,11 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
 <article></article>
 </section>
 
-<section id="cont0">
+<section id="contenido">
 <article>
   ¿C&oacute;mo declaramos variables?
 </article>
-<div id="div0">
+<div id="contenedor">
   <p>Declarando variables en Javascript.</p>
   <div id="code">
    <!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">var</span> <span style="color: #d0d0d0">nombre</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&quot;Federico Nietzche&quot;</span><span style="color: #d0d0d0">;</span> 
@@ -36,9 +36,46 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
 
  </div>
 </div>
-
 </section>
  
+<section id="contenido">
+	<article>
+		¿C&oacute;mo creamos e invocamos funciones?
+	</article>
+	<div id="contenedor">
+		<p>Funciones.</p>
+		<div id="code">
+			<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">function</span> <span style="color: #d0d0d0">mensaje(){</span>
+  <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #ed9d13">&quot;You do not know JS!!&quot;</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0">}</span>
+
+<span style="color: #6ab825; font-weight: bold">let</span> <span style="color: #d0d0d0">saludo</span> <span style="color: #d0d0d0">=</span> <span style="color: #6ab825; font-weight: bold">function</span><span style="color: #d0d0d0">(){</span>
+    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #ed9d13">&quot;Hola, mundo!!!&quot;</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0">}</span>
+
+<span style="color: #6ab825; font-weight: bold">let</span> <span style="color: #d0d0d0">mensaje_num</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">=&gt;</span> <span style="color: #3677a9">33</span><span style="color: #d0d0d0">;</span>
+<span style="color: #6ab825; font-weight: bold">var</span> <span style="color: #d0d0d0">suma</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">(x,y)</span> <span style="color: #d0d0d0">=&gt;</span> <span style="color: #d0d0d0">x</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">y;</span>
+
+<span style="color: #999999; font-style: italic">//Invocamos las funciones</span>
+<span style="color: #d0d0d0">mensaje();</span>
+<span style="color: #d0d0d0">saludo();</span>
+<span style="color: #6ab825; font-weight: bold">var</span> <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">mensaje_num();</span>
+<span style="color: #6ab825; font-weight: bold">let</span> <span style="color: #d0d0d0">mi_suma</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">suma(</span><span style="color: #3677a9">32</span><span style="color: #d0d0d0">,</span><span style="color: #3677a9">43</span><span style="color: #d0d0d0">);</span>
+<span style="color: #6ab825; font-weight: bold">let</span> <span style="color: #d0d0d0">mi_type</span> <span style="color: #d0d0d0">=</span> <span style="color: #6ab825; font-weight: bold">typeof</span><span style="color: #d0d0d0">(</span><span style="color: #ed9d13">&quot;String&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #6ab825; font-weight: bold">let</span> <span style="color: #d0d0d0">mi_other_type</span> <span style="color: #d0d0d0">=</span> <span style="color: #6ab825; font-weight: bold">typeof</span><span style="color: #d0d0d0">(</span><span style="color: #3677a9">32</span> <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">111</span><span style="color: #d0d0d0">);</span>
+
+<span style="color: #6ab825; font-weight: bold">try</span><span style="color: #d0d0d0">{</span> 
+  <span style="color: #6ab825; font-weight: bold">let</span> <span style="color: #d0d0d0">nada</span> <span style="color: #d0d0d0">=</span> <span style="color: #6ab825; font-weight: bold">typeof</span><span style="color: #d0d0d0">(nada);</span> 
+<span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">catch</span><span style="color: #d0d0d0">(e){</span>
+  <span style="color: #d0d0d0">console.log(</span><span style="color: #ed9d13">&quot;Error&quot;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+		</div>
+	</div>
+</section>
+
+
 <footer>@inforhomex</footer>
 </body>
 </hml>
