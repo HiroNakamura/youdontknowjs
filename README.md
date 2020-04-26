@@ -12,7 +12,9 @@ $ npm -v
 ```
 
 **http-server**
+
 Desde una terminal ubicarte en el directorio y ejecutar:
+
 
 ```java
 $ http-server mytutorial
