@@ -6,7 +6,16 @@
 
 Muchas cosas. En primer lugar, reconocer que no sabes Javascript.
 
-Para ejecutar este proyecto debes tener **http-server** instaldo (y, por ende, también npm) en tu máquina. Desde una terminal ubicarte en el directorio y ejecutar:
+Para ejecutar este proyecto debes tener **http-server** instalado (y, por ende, también npm) en tu máquina. 
+```java
+$ npm -v
+```
+
+**http-server**
+
+Desde una terminal ubicarte en el directorio y ejecutar:
+
+
 ```java
 $ http-server mytutorial
 ```
