@@ -1,4 +1,17 @@
+
+body{
+  background-color: #EDEFEE;
+}
+
 h1{
   background-color: steelblue;
   color: #000000;
+  text-align: center;
+}
+
+button{
+  left: 50%;
+  position: relative;
+  color: #CA000A;
+  background-color: #fff;
 }

@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     const btn1 = document.getElementById('muestra1');
     const btn2 = document.getElementById('muestra2');
+    const btn3 = document.getElementById('muestra3');
 
     btn1.addEventListener('click',()=>{
         if(btn1.textContent == 'Mostrar'){
@@ -27,7 +28,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
-
+    btn3.addEventListener('click',()=>{
+        if(btn3.textContent == 'Mostrar'){
+            document.getElementById("code3").removeAttribute("style");
+            btn3.textContent = 'Ocultar'
+        }
+        else{
+            document.getElementById("code3").setAttribute("style","display: none;");
+            btn3.textContent = 'Mostrar'
+        }
+    });
     
     
 });
