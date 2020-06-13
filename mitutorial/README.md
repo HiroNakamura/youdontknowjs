@@ -4,8 +4,8 @@
 ## Tipos
 
 
-```java
-
+```
+//Tipos
 let entero:number=0
 let cadena:string="Typescript for begginers"
 let verdadero:booleano=true
