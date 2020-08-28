@@ -6,6 +6,11 @@
   <script src="js/index.js"></script>
   <script src="src/main.js"></script>
    <link rel="stylesheet" href="css/index.css"/>
+
+<script type="text/javascript">
+  
+</script>
+
 </head>
 <body>
 <header><h1>¿Realmente crees que sabes JS?</h1></header>
@@ -112,6 +117,36 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
     <button id="muestra3">Mostrar</button>
   </div>
   </section>
+
+<script>
+  console.log("Javascript activo...");
+  function confEnvio(){
+    var cveusu = document.forms["myForm"]["cveusu"].value;
+    if (cveusu == "") {
+      alert("El ID no debe estar vacio");
+      return false;
+    }
+  }
+</script>
+
+<section>
+  <article>Formulario</article>
+  <div id="contenedor">
+    <form id="myForm" onsubmit="return confEnvio()" name="myForm" action="" method="get">
+      <label>ID de usuario:</label>
+      <input type="tex" name="cveusu" id="cveusu" size="8"/>
+      <input style="position: relative; color: #CA000A; background-color: #fff;" type="submit" value="Enviar" name="enviar" />
+    </form>
+  </div>
+</section>
+
+
+
+<script>
+  //var myURL ='https://www.youtube.com/';
+  //window.location.replace(myURL);
+</script>
+
 
 <footer>@inforhomex</footer>
 </body>
