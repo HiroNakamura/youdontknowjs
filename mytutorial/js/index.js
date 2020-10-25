@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const btn1 = document.getElementById('muestra1');
     const btn2 = document.getElementById('muestra2');
     const btn3 = document.getElementById('muestra3');
+    const btn4 = document.getElementById('muestra4');
+
 
     btn1.addEventListener('click',()=>{
         if(btn1.textContent == 'Mostrar'){
@@ -39,9 +41,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
-
-   
-    
+    btn4.addEventListener('click', ()=>{
+        if(btn4.textContent == 'Mostrar'){
+            document.getElementById("code4").removeAttribute("style");
+            btn4.textContent = 'Ocultar'
+        }
+        else{
+            document.getElementById("code4").setAttribute("style","display: none;");
+            btn4.textContent = 'Mostrar'
+        }
+    });
     
     
 });

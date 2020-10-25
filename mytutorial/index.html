@@ -140,7 +140,41 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
   </div>
 </section>
 
+<hr/>
 
+<section id="contenido">
+  <article>
+    <p>Funciones de cadena</p>
+  </article>
+  <div id="contenedor">
+    <div id="code4" style="display: none;">
+     <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">nombre</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;Juan Jacobo Rosseau&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">palabras</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">nombre</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">split</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot; &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">letras</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">nombre</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #66d9ef">function</span> <span style="color: #a6e22e">quitarEspacio</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">nombre</span><span style="color: #f8f8f2">){</span>
+   <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">result</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
+   <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">i</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #a6e22e">nombre</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">;</span><span style="color: #a6e22e">i</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">){</span>
+      <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">c</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">nombre</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">charAt</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">i</span><span style="color: #f8f8f2">);</span>
+      <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">c</span><span style="color: #f92672">!=</span> <span style="color: #e6db74">&quot; &quot;</span><span style="color: #f8f8f2">){</span>
+          <span style="color: #a6e22e">result</span> <span style="color: #f92672">+=</span><span style="color: #a6e22e">c</span><span style="color: #f8f8f2">;</span>
+      <span style="color: #f8f8f2">}</span>
+   <span style="color: #f8f8f2">}</span>
+   <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">result</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">sinEspacios</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">quitarEspacios</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">nombre</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #f8f8f2">document.</span><span style="color: #a6e22e">writeln</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Nombre: &quot;</span><span style="color: #f92672">+</span><span style="color: #a6e22e">nombre</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">document.</span><span style="color: #a6e22e">writeln</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;No. de palabras: &quot;</span><span style="color: #f92672">+</span><span style="color: #a6e22e">palabras</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">document.</span><span style="color: #a6e22e">writeln</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Cant. de letras [con espacios]: &quot;</span><span style="color: #f92672">+</span><span style="color: #a6e22e">letras</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">document.</span><span style="color: #a6e22e">writeln</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Cant. de letras [sin espacios]: &quot;</span><span style="color: #f92672">+</span><span style="color: #a6e22e">sinEspacios</span><span style="color: #f8f8f2">);</span>
+</pre></div>
+
+   </div>
+   <button id="muestra4">Mostrar</button>
+  </div>
+</section>
 
 <script>
   //var myURL ='https://www.youtube.com/';
