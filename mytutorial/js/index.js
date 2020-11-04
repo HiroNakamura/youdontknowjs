@@ -2,11 +2,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log('You do not know Javascript !!');
 
     const TAM = 100;
+
     
     const btn1 = document.getElementById('muestra1');
     const btn2 = document.getElementById('muestra2');
     const btn3 = document.getElementById('muestra3');
     const btn4 = document.getElementById('muestra4');
+    const btn5 = document.getElementById('muestra5');
+
+    document.querySelector("h1").addEventListener('click',()=>{
+        alert("Hola")
+    });
+
+    document.querySelector("h1").addEventListener("mouseover",()=>{
+        document.querySelector("h1").setAttribute("class", "iluminar");
+    });
+
+    document.querySelector("h1").addEventListener("mouseout",()=>{
+        document.querySelector("h1").setAttribute("class", "desiluminar");
+    });
 
 
     btn1.addEventListener('click',()=>{
@@ -49,6 +63,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         else{
             document.getElementById("code4").setAttribute("style","display: none;");
             btn4.textContent = 'Mostrar'
+        }
+    });
+
+    btn5.addEventListener('click', ()=>{
+        if(btn5.textContent == 'Mostrar'){
+            document.getElementById("code5").removeAttribute("style");
+            btn5.textContent = 'Ocultar'
+        }
+        else{
+            document.getElementById("code5").setAttribute("style","display: none;");
+            btn5.textContent = 'Mostrar'
         }
     });
     

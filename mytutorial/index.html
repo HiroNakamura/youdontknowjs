@@ -6,7 +6,7 @@
   <script src="js/index.js"></script>
   <script src="src/main.js"></script>
    <link rel="stylesheet" href="css/index.css"/>
-
+   <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
 <script type="text/javascript">
   
 </script>
@@ -133,14 +133,13 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
   <article>Formulario</article>
   <div id="contenedor">
     <form id="myForm" onsubmit="return confEnvio()" name="myForm" action="" method="get">
-      <label>ID de usuario:</label>
-      <input type="tex" name="cveusu" id="cveusu" size="8"/>
+      <label>Introduce tu ID de usuario:</label>
+      <input type="tex" placeholder="Introduce tu ID" name="cveusu" id="cveusu" size="12"/>
       <input style="position: relative; color: #CA000A; background-color: #fff;" type="submit" value="Enviar" name="enviar" />
     </form>
   </div>
 </section>
 
-<hr/>
 
 <section id="contenido">
   <article>
@@ -162,23 +161,39 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
    <span style="color: #f8f8f2">}</span>
    <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">result</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">}</span>
-
 <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">sinEspacios</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">quitarEspacios</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">nombre</span><span style="color: #f8f8f2">);</span>
-
 <span style="color: #f8f8f2">document.</span><span style="color: #a6e22e">writeln</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Nombre: &quot;</span><span style="color: #f92672">+</span><span style="color: #a6e22e">nombre</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">document.</span><span style="color: #a6e22e">writeln</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;No. de palabras: &quot;</span><span style="color: #f92672">+</span><span style="color: #a6e22e">palabras</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">document.</span><span style="color: #a6e22e">writeln</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Cant. de letras [con espacios]: &quot;</span><span style="color: #f92672">+</span><span style="color: #a6e22e">letras</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">document.</span><span style="color: #a6e22e">writeln</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Cant. de letras [sin espacios]: &quot;</span><span style="color: #f92672">+</span><span style="color: #a6e22e">sinEspacios</span><span style="color: #f8f8f2">);</span>
 </pre></div>
-
    </div>
    <button id="muestra4">Mostrar</button>
+  </div>
+</section>
+
+<section>
+  <article>
+    <p>Obteniendo datos de los tags HTML</p>
+  </article>
+  <div id="contenedor">
+    <div id="code5" style="display: none;">
+          <p id="prrf">Hola</p>
+    </div>
+    <button id="muestra5">Mostrar</button>
   </div>
 </section>
 
 <script>
   //var myURL ='https://www.youtube.com/';
   //window.location.replace(myURL);
+
+  window.onload = function () {
+    console.log("Hecho, window.onload funcionando!!!");
+    console.log("Texto de la etiqueta p: ",document.getElementById("prrf").innerHTML);
+    console.log("Longitud: ",document.getElementById("prrf").innerHTML.length);
+    document.querySelector("h1").setAttribute("class", "desiluminar");
+  };
 </script>
 
 

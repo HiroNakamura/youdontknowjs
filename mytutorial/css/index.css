@@ -3,10 +3,23 @@ body{
   background-color: #EDEFEE;
 }
 
-h1{
+.desiluminar{
   background-color: steelblue;
   color: #000000;
+  font-family: 'Syne Mono', monospace;
   text-align: center;
+}
+
+.iluminar{
+  background-color:white;
+  color:red;
+  font-family: 'Syne Mono', monospace;
+  text-align: center;
+}
+
+h2{
+  color: #000000;
+  font-family: 'Syne Mono', monospace;
 }
 
 button{
@@ -15,3 +28,5 @@ button{
   color: #CA000A;
   background-color: #fff;
 }
+
+
