@@ -3,6 +3,11 @@ body{
   background-color: #EDEFEE;
 }
 
+.fondo{
+  background-color: #000000;
+  color: #ffff;
+}
+
 .desiluminar{
   background-color: steelblue;
   color: #000000;
@@ -14,6 +19,7 @@ body{
   background-color:white;
   color:red;
   font-family: 'Syne Mono', monospace;
+  font-size: 45px;
   text-align: center;
 }
 

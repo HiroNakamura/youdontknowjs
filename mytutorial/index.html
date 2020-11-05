@@ -187,12 +187,27 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
 <script>
   //var myURL ='https://www.youtube.com/';
   //window.location.replace(myURL);
+  const divs = document.getElementsByTagName("div");
 
+  function recorriendoDivs(){
+    console.log("Recorriendo divs: ")
+    for(let d in divs){
+      console.log("nombre: ",divs[d].id);
+    }
+  }
+
+
+  
   window.onload = function () {
     console.log("Hecho, window.onload funcionando!!!");
     console.log("Texto de la etiqueta p: ",document.getElementById("prrf").innerHTML);
     console.log("Longitud: ",document.getElementById("prrf").innerHTML.length);
     document.querySelector("h1").setAttribute("class", "desiluminar");
+    console.log("Cant. de etiquetas div: ",divs.length);
+    console.log("Cant. de etiquetas h1: ",document.getElementsByTagName("h1").length);
+
+    recorriendoDivs();
+
   };
 </script>
 

@@ -10,16 +10,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const btn4 = document.getElementById('muestra4');
     const btn5 = document.getElementById('muestra5');
 
-    document.querySelector("h1").addEventListener('click',()=>{
-        alert("Hola")
-    });
-
     document.querySelector("h1").addEventListener("mouseover",()=>{
         document.querySelector("h1").setAttribute("class", "iluminar");
+        document.querySelector("body").setAttribute("class","fondo");
     });
 
     document.querySelector("h1").addEventListener("mouseout",()=>{
         document.querySelector("h1").setAttribute("class", "desiluminar");
+        document.querySelector("body").removeAttribute("class");
     });
 
 
