@@ -3,14 +3,16 @@ compilar: tsc --watch
 ejecutar: node dist/
 */
 
-class Objeto<T>{
-    constructor(public valor: T){
-        this.valor = valor;
-    }
-}
+import {Objeto} from './objeto'
 
-function main(){
+function testA(){
     var obj:Objeto<number> = new Objeto<number>(45);
+    console.log('**** Clases ****')
     console.log(`Valor: ${obj.valor}, Tipo: ${typeof(obj.valor)}`)
 }
+
+function main() {
+	testA()
+}
+
 main()
