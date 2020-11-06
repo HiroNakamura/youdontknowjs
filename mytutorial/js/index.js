@@ -20,6 +20,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.querySelector("body").removeAttribute("class");
     });
 
+    document.querySelector("h1").addEventListener("click",()=>{
+        document.querySelector("h1").textContent="Debes aprender JS!!";
+    });
+
+    document.querySelector("h1").addEventListener("dblclick",()=>{
+        document.querySelector("h1").textContent="¿Realmente crees que sabes JS?";
+    });
+
 
     btn1.addEventListener('click',()=>{
         if(btn1.textContent == 'Mostrar'){
