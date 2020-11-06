@@ -179,6 +179,7 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
   <div id="contenedor">
     <div id="code5" style="display: none;">
           <p id="prrf">Hola</p>
+          <div id="datos"></div>
     </div>
     <button id="muestra5">Mostrar</button>
   </div>
@@ -194,6 +195,11 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
     for(let d in divs){
       console.log("nombre: ",divs[d].id);
     }
+    console.log("--------------------")
+    for(let d of divs){
+      console.log("el nombre del id: ",d.id)
+    }
+
   }
 
 
@@ -205,6 +211,8 @@ Aqu&iacute; vamos a demostrar que no sabes JS. No te preocupes, no eres el &uacu
     document.querySelector("h1").setAttribute("class", "desiluminar");
     console.log("Cant. de etiquetas div: ",divs.length);
     console.log("Cant. de etiquetas h1: ",document.getElementsByTagName("h1").length);
+
+
 
     recorriendoDivs();
 

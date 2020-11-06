@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const btn3 = document.getElementById('muestra3');
     const btn4 = document.getElementById('muestra4');
     const btn5 = document.getElementById('muestra5');
+    const my_datos = document.getElementById('datos')
+    const my_divs = document.getElementsByTagName("div");
 
     document.querySelector("h1").addEventListener("mouseover",()=>{
         document.querySelector("h1").setAttribute("class", "iluminar");
@@ -72,16 +74,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
+    let mostrar = ()=>{
+        let todo;
+        for(let div of my_divs){
+            todo +='<br/>Id: '+div.id
+        }
+        todo+="<br/>Cant. de divs: "+my_divs.length;
+        return todo;
+    };
+
     btn5.addEventListener('click', ()=>{
         if(btn5.textContent == 'Mostrar'){
             document.getElementById("code5").removeAttribute("style");
-            btn5.textContent = 'Ocultar'
+            btn5.textContent = 'Ocultar';
+            my_datos.innerHTML= 'Etiquetas div:<br/>'+mostrar();          
         }
         else{
             document.getElementById("code5").setAttribute("style","display: none;");
-            btn5.textContent = 'Mostrar'
+            btn5.textContent = 'Mostrar';
+            my_datos.innerHTML=''
         }
     });
+
+    
     
     
 });

@@ -30,5 +30,5 @@ $ npm i http-server
 Links:
 
 * [http://youmightnotneedjquery.com/](http://youmightnotneedjquery.com/)
-
+* [https://javascript.info/](https://javascript.info/)
 
