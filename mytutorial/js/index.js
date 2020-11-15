@@ -9,8 +9,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const btn3 = document.getElementById('muestra3');
     const btn4 = document.getElementById('muestra4');
     const btn5 = document.getElementById('muestra5');
+    const btn6 = document.getElementById('muestra6');
     const my_datos = document.getElementById('datos')
     const my_divs = document.getElementsByTagName("div");
+    const rest = document.getElementById('rest');
+
 
     document.querySelector("h1").addEventListener("mouseover",()=>{
         document.querySelector("h1").setAttribute("class", "iluminar");
@@ -96,6 +99,42 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
+    btn6.addEventListener('click', ()=>{
+        if(btn5.textContent == 'Mostrar'){
+            document.getElementById("code6").removeAttribute("style");
+            btn5.textContent = 'Ocultar';    
+
+            var resultado ='';
+            rest.innerHTML = 'Datos obtenidos desde API REST (Spring Boot):<br/>'
+
+            fetch('http://localhost:8090/chilaquilsys/libros')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                
+                for(let datos in data){
+                    resultado = 'Id: '+data[datos].id;
+                    resultado += '<br/>Titulo: '+data[datos].titulo;
+                    resultado += '<br/>Autor: '+data[datos].autor;
+                    resultado += '<br/>Editorial: '+data[datos].editorial;
+                    resultado += '<br/>Isbn: '+data[datos].isbn;
+                    resultado += '<br/>Paginas: '+data[datos].paginas+"<br/>";
+                    console.log('Id:',data[datos].id)
+                    console.log('Todo:',resultado)
+                    rest.innerHTML += resultado;
+                }
+                
+            });
+
+            
+
+            
+        }
+        else{
+            document.getElementById("code6").setAttribute("style","display: none;");
+            btn5.textContent = 'Mostrar';
+        }
+    });
     
     
     
