@@ -10,9 +10,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const btn4 = document.getElementById('muestra4');
     const btn5 = document.getElementById('muestra5');
     const btn6 = document.getElementById('muestra6');
+    const btn7 = document.getElementById('muestra7');
     const my_datos = document.getElementById('datos')
     const my_divs = document.getElementsByTagName("div");
     const rest = document.getElementById('rest');
+    const datosPublic = document.getElementById('datosPublic');
+
+
+    function getSuperHeroes(){
+        fetch('https://gateway.marvel.com/v1/public/comics?ts=1&apikey=e0ff822bf9a2b56f671ebdbd594d426b&hash=e7b1633389293ca17ddf4c25e983a508')
+        .then(response => response.json())
+        .then(data =>{
+            console.log('Datos:',data)
+            datosPublic.innerHTML=JSON.stringify(data);
+        })
+        .catch(error=>{
+            console.error(`Ha ocurrido una excepcion: ${error}`)
+        });
+    }
+
 
 
     document.querySelector("h1").addEventListener("mouseover",()=>{
@@ -100,9 +116,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     btn6.addEventListener('click', ()=>{
-        if(btn5.textContent == 'Mostrar'){
+        if(btn6.textContent == 'Mostrar'){
             document.getElementById("code6").removeAttribute("style");
-            btn5.textContent = 'Ocultar';    
+            btn6.textContent = 'Ocultar';    
 
             var resultado ='';
             rest.innerHTML = 'Datos obtenidos desde API REST (Spring Boot):<br/>'
@@ -125,14 +141,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
                 
             });
-
-            
-
             
         }
         else{
             document.getElementById("code6").setAttribute("style","display: none;");
-            btn5.textContent = 'Mostrar';
+            btn6.textContent = 'Mostrar';
+        }
+    });
+
+
+
+    btn7.addEventListener('click', ()=>{
+        if(btn7.textContent == 'Mostrar'){
+            document.getElementById("code7").removeAttribute("style");
+            btn7.textContent = 'Ocultar';   
+            getSuperHeroes();       
+        }
+        else{
+            document.getElementById("code7").setAttribute("style","display: none;");
+            btn7.textContent = 'Mostrar';
         }
     });
     
