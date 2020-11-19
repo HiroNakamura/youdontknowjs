@@ -21,8 +21,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         fetch('https://gateway.marvel.com/v1/public/comics?ts=1&apikey=e0ff822bf9a2b56f671ebdbd594d426b&hash=e7b1633389293ca17ddf4c25e983a508')
         .then(response => response.json())
         .then(data =>{
-            console.log('Datos:',data)
-            datosPublic.innerHTML=JSON.stringify(data);
+            //console.log('Datos:',data)
+            //console.log(JSON.stringify(data));
+            console.log('Recorremos:')
+            for(let dato of Object.keys(data)){
+                var contenido = data[dato];
+                console.log(contenido);
+            }
+
         })
         .catch(error=>{
             console.error(`Ha ocurrido una excepcion: ${error}`)
