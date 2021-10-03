@@ -5,7 +5,7 @@
 
 Muchas cosas. En primer lugar, reconocer que no sabes Javascript.
 
-Para ejecutar este proyecto debes tener **http-server** instalado (y, por ende, también npm) en tu máquina. 
+Para ejecutar este proyecto debes tener **http-server** instalado (y, por ende, también node & npm) en tu máquina. 
 
 Revisar la versión de NPM instalada:
 ```java
@@ -18,8 +18,10 @@ Desde una terminal ubicarte en el directorio y ejecutar:
 
 
 ```java
-$ http-server mytutorial
+$ http-server mytutorial/
+$ http-server basico-js/
 ```
+
 Abrir el navegador web en http://localhost:8080
 
 En caso de que no lo tengas instalado lo puedes hacer así:
@@ -27,8 +29,17 @@ En caso de que no lo tengas instalado lo puedes hacer así:
 $ npm i http-server
 ```
 
+### Node JS ###
+```java
+$ node mitutorial/ 
+```
+
+
+
 Links:
 
 * [http://youmightnotneedjquery.com/](http://youmightnotneedjquery.com/)
 * [https://javascript.info/](https://javascript.info/)
-
+* [https://jsparagatos.com/](https://jsparagatos.com/)
+* [https://souldeveloper.github.io/grupo_javascript/index.html](https://souldeveloper.github.io/grupo_javascript/index.html)
+* [https://www.hscripts.com/es/tutoriales/javascript/](https://www.hscripts.com/es/tutoriales/javascript/)
