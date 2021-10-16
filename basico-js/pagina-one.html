@@ -3,6 +3,112 @@
     <title>Programando en JS</title>
   </head>
 <body>
-  <h1>Programando en JS</h1>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById("root");
+    root.innerHTML="<h1>Expresiones Regulares</h1>";
+ </script>
+ <form name="formulario">
+   Introduce cadena:
+   <input type="text" value="" name="txtcadena" maxlength="13"/>
+   <input type="button" value="Enviar" onclick="enviar();"/>
+ </form>
+ <script>
+  var formularioRev= document.forms.formulario;
+
+  function trim(cad){
+    return cad.trim();
+  }
+
+  function validar(){
+    // Cadenas que no contengan a-e, tifus, costo, cobro ...
+    var expr1 = /[^a-e]/; 
+    // Cadenas que contengan e.t, extenuante, extinción, extra ...
+    var expr2 = /e.t/;
+    // Cadena que empiece con F
+    var expr3 = /^F/;
+    // Cadena que empiece con X
+    var expr4 = /^X/;
+    // Cadena que empiece con A o a
+    var expr5 = /^A|a/;
+    // Cadena que empiece con F o f
+    var expr6 = /^F|f/;
+    // Cadena que contenga del 0 al 9
+    var expr7 = /[0-9]/;
+    // Cadena que no contenga del 0 al 9
+    var expr8 = /[^0-9]/;
+    // Cadena de solo números y letras, falla si se coloca algún número o letra con caracteres raros
+    var expr9 = /[A-Za-z0-9]/;
+    // Cadena que termine en u
+    var expr10 = /u$/;
+    // Cadena que termine en U o u
+    var expr11 = /U|u$/;
+
+    /*if(!expr1.test(formularioRev.txtcadena.value)){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr2.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr3.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr4.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr5.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr6.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr7.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr8.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr9.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr10.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    if(!expr11.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }
+
+    return true;
+  }
+
+  function enviar(){
+    if(validar()){
+      alert("Datos enviados");
+    }else{
+      formularioRev.txtcadena.value ="";
+    }
+  }
+</script>
 </body>
 </html>
