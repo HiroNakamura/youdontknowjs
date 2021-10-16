@@ -43,6 +43,18 @@
     var expr10 = /u$/;
     // Cadena que termine en U o u
     var expr11 = /U|u$/;
+    // Cadena que contenga vocales
+    var expr12 = /[aeiou]/g;
+    // Cadena que contenga números del 1 al 3
+    var expr13 = new RegExp("[123]","g");
+    // Cadena que contenga la palabra Ribola
+    var expr14 = new RegExp("Ribola","g"); 
+    //console.log(expr14.exec("El sultán de Ribola"));
+    // Cadena que contenga nis o NIS
+    var expr15 = /nis/gi;
+    // Cadena que contenga Tenis, T9nis, Tnnis, T%nis, T3nis ...
+    var expr16 = new RegExp("T.nis","g");
+    
 
     /*if(!expr1.test(formularioRev.txtcadena.value)){
       alert("La cadena no cumple con el patrón");
@@ -94,7 +106,32 @@
       return false;
     }*/
 
-    if(!expr11.test(trim(formularioRev.txtcadena.value))){
+    /*if(!expr11.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr12.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr13.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr14.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    /*if(!expr15.test(trim(formularioRev.txtcadena.value))){
+      alert("La cadena no cumple con el patrón");
+      return false;
+    }*/
+
+    if(!expr16.test(trim(formularioRev.txtcadena.value))){
       alert("La cadena no cumple con el patrón");
       return false;
     }
