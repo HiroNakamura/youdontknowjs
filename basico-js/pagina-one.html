@@ -166,5 +166,15 @@ Sin embargo, la mejor5 forma de obtener una cadena que cumpla cierto criterio8 e
   prrf1.innerHTML = newPrrf1;
   prrf2.innerHTML = newPrrf2;
 </script>
+
+<div id="subcontainer">
+  <p class="prrf3">En ün lügar de la Mancha, el teniente y lügateniente del hüerto cosecaron müchas üvas. 
+    Algunas verdes y, otras más, azüles como el cielo azül.</p>
+</div>
+<script>
+  const prrf3 = document.querySelector(".prrf3");
+  let newPrrf3 = prrf3.innerText.replace(/\u00FC/g,"u");
+  prrf3.innerHTML = newPrrf3;
+</script>
 </body>
 </html>
