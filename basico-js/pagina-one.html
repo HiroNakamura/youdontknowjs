@@ -147,5 +147,24 @@
     }
   }
 </script>
+
+<div id="container">
+<p class="prrf1">Este es un simple párrafo1. Javascript2 nos permite hacer uso de muchas3 funciones para4 manipulación de cadenas. 
+Sin embargo, la mejor5 forma de obtener una cadena que cumpla cierto criterio8 es con el uso de Regex.   
+</p>
+<br/>
+<p class="prrf2">inforhomex20021</p>
+</div>
+<script>
+  const prrf1 = document.querySelector(".prrf1");
+  const prrf2 = document.querySelector(".prrf2");
+  console.log("Texto 1:",prrf1.innerText);
+  console.log("Texto 2:",prrf2.innerText);  
+  let newPrrf1 = prrf1.innerText.replace(/\d/g,"");
+  newPrrf1 = newPrrf1.replace(/\s\s/gu," ");
+  let newPrrf2 = prrf2.innerText.replace(/\w+/g,"inforhomex @2021");
+  prrf1.innerHTML = newPrrf1;
+  prrf2.innerHTML = newPrrf2;
+</script>
 </body>
 </html>
