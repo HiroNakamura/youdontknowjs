@@ -168,13 +168,46 @@ Sin embargo, la mejor5 forma de obtener una cadena que cumpla cierto criterio8 e
 </script>
 
 <div id="subcontainer">
-  <p class="prrf3">En ün lügar de la Mancha, el teniente y lügateniente del hüerto cosecaron müchas üvas. 
+  <p class="prrf3">En ün lügar de la Mancha, el teniente y lügarteniente del hüerto cosecharon müchas üvas. 
     Algunas verdes y, otras más, azüles como el cielo azül.</p>
 </div>
 <script>
   const prrf3 = document.querySelector(".prrf3");
   let newPrrf3 = prrf3.innerText.replace(/\u00FC/g,"u");
   prrf3.innerHTML = newPrrf3;
+</script>
+
+<div id="contenedor">
+  <p class="prrf4"></p>
+</div>
+<script>
+  const palabras = ["\tGato con \nsotas $500","\nGato con \tsotas $500.00"];
+  let prrf4 = document.querySelector(".prrf4");
+  prrf4.innerHTML ="<br/>1:"+palabras[0].match(/sotas/g);
+  prrf4.innerHTML += "<br/>2:"+palabras[1].match(/\n/g);
+  prrf4.innerHTML += "<br/>3:"+palabras[1].match(/\$/g);
+  prrf4.innerHTML += "<br/>4:"+palabras[0].match(/\$/g);
+  prrf4.innerHTML += "<br/>5:"+palabras[0].match(/\t/g);
+  prrf4.innerHTML += "<br/>6:"+palabras[1].match(/\t/g);
+</script>
+
+<div id="contienedortwo">
+  <p class="prrf5">Susana tiene 3 años de servicio, Juan 2 años de servicio y Maria 4 años de servicio.</p>
+  <label class="lblResultado"></label>
+</div>
+<script>
+  const prrf5 = document.querySelector(".prrf5");
+  let lblResultado = document.querySelector(".lblResultado");
+  var regxNums = /\d/g; 
+  console.log("Texto:",prrf5.innerText);
+  let numsPrrf5 = prrf5.innerText.match(regxNums);
+  let sumaNums = 0;
+  console.log("Numeros obtenidos:",numsPrrf5);
+  for(let n in numsPrrf5){
+    sumaNums += parseInt(numsPrrf5[n]);
+    console.log("Numero: ",numsPrrf5[n]);
+  }
+  lblResultado.innerHTML = "No. total de años de servicio: <font color='red'>"+sumaNums+" años </font> de servicio";
 </script>
 </body>
 </html>
