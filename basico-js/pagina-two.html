@@ -13,9 +13,13 @@
      fetch('https://pokeapi.co/v2/pokemon/')
        .then(res => res.json())
        .then(data =>{
+             const contenedor = document.getElementById("contenedor");
+             var result = '';
              data.results.forEach(element =>{
                   console.log(`Nombre: ${element.name}`);
+                  result += element.name;
              });
+            contenedor.innerHTML = "Resultado<br/>"+result;
         }).catch(err=> console.log(err));
   </script>
 <aside></aside>
@@ -23,4 +27,4 @@
 </section>
 <footer>@youdonotknowjavascript</footer>
 </body>
-</hml>
+</html>
