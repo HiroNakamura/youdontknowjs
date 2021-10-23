@@ -2,7 +2,7 @@
  <html lang="es">
  <head>
   <meta charset="utf-8"> 
-  <title>Uso de fecth</title>
+  <title>Uso de fetch</title>
 </head>
 <body>
 <header><h1>Usando Fetch</h1></header>
@@ -10,17 +10,66 @@
 <article>
 </article>
   <script>
-     fetch('https://pokeapi.co/v2/pokemon/')
-       .then(res => res.json())
-       .then(data =>{
-             const contenedor = document.getElementById("contenedor");
-             var result = '';
-             data.results.forEach(element =>{
-                  console.log(`Nombre: ${element.name}`);
-                  result += element.name;
-             });
-            contenedor.innerHTML = "Resultado<br/>"+result;
-        }).catch(err=> console.log(err));
+     
+     /*fetch('https://pokeapi.co/api/v2/pokemon/')
+     .then(res => res.json())
+     .then(data =>{
+      const contenedor = document.getElementById("contenedor");
+      var result = '';
+        data.results.forEach(element =>{
+          //console.log(`Nombre: ${element.name}`);
+          result += "Nombre: "+element.name+"<br/>";
+       });
+      contenedor.innerHTML = "Resultado<br/>"+result;
+      }).catch(function(err) {
+        console.log(err)
+      });*/
+
+    
+    /*
+    const obtenerPokemones = async()=>{
+      try{
+        const res = await fetch('https://pokeapi.co/api/v2/pokemon/');
+        const data = await res.json();
+        const arregloUrl = data.results.map(poke => poke.name);
+        const contenedor = document.getElementById("contenedor");
+        var resultado ='';
+
+        arregloUrl.forEach(element => {
+          resultado += "Nombre: "+element+"<br/>";
+        });
+
+        contenedor.innerHTML = "Resultado<br/>"+resultado;
+      }
+      catch(error){
+        console.log(error)
+      }
+    };
+    obtenerPokemones();*/
+
+
+    const obtenerPokemones = async()=>{
+      try{
+        const res = await fetch('https://pokeapi.co/api/v2/pokemon/');
+        const data = await res.json();
+        const arregloUrl = data.results.filter(poke => poke.name !== 'venusaur');
+        const contenedor = document.getElementById("contenedor");
+        var resultado ='';
+
+        arregloUrl.forEach(element => {
+          resultado += "Nombre: "+element+"<br/>";
+        });
+
+        contenedor.innerHTML = "Resultado<br/>"+resultado;
+      }
+      catch(error){
+        console.log(error)
+      }
+    };
+    obtenerPokemones();
+
+
+
   </script>
 <aside></aside>
 <article>Un contenido</article>
