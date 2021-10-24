@@ -34,7 +34,17 @@ $ npm i http-server
 $ node mitutorial/ 
 ```
 
+### Modo estricto ###
+```javascript
+"use strict"
 
+let entero = 33;
+console.log(typeof(entero));// number
+let cadena = "11";
+console.log(typeof(cadena));// string
+let fecha = new Date();
+console.log(typeof(fecha));// object
+```
 
 Links:
 
@@ -43,3 +53,9 @@ Links:
 * [https://jsparagatos.com/](https://jsparagatos.com/)
 * [https://souldeveloper.github.io/grupo_javascript/index.html](https://souldeveloper.github.io/grupo_javascript/index.html)
 * [https://www.hscripts.com/es/tutoriales/javascript/](https://www.hscripts.com/es/tutoriales/javascript/)
+* [https://javascript.espaciolatino.com/](https://javascript.espaciolatino.com/)
+* [https://jsisweird.com/](https://jsisweird.com/)
+* [https://javascript30.com/](https://javascript30.com/)
+* [https://eslint.org/](https://eslint.org/)
+* [https://jshint.com/](https://jshint.com/)
+* [http://www.java2s.com/ref/javascript/javascript.html](http://www.java2s.com/ref/javascript/javascript.html)

@@ -54,6 +54,15 @@
     var expr15 = /nis/gi;
     // Cadena que contenga Tenis, T9nis, Tnnis, T%nis, T3nis ...
     var expr16 = new RegExp("T.nis","g");
+
+    var strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\^&\*])(?=.{8,})/;
+
+    if(!strongRegex.test(formularioRev.txtcadena.value)){
+        //this.error.show = true;
+        //this.error.message = 'La contraseña no cumple los requisitos';
+        alert('La contraseña no cumple los requisitos')
+        return false;
+    }
     
 
     /*if(!expr1.test(formularioRev.txtcadena.value)){
@@ -131,10 +140,10 @@
       return false;
     }*/
 
-    if(!expr16.test(trim(formularioRev.txtcadena.value))){
+    /*if(!expr16.test(trim(formularioRev.txtcadena.value))){
       alert("La cadena no cumple con el patrón");
       return false;
-    }
+    }*/
 
     return true;
   }
@@ -209,5 +218,6 @@ Sin embargo, la mejor5 forma de obtener una cadena que cumpla cierto criterio8 e
   }
   lblResultado.innerHTML = "No. total de años de servicio: <font color='red'>"+sumaNums+" años </font> de servicio";
 </script>
+<a href="index.html">Regresar</a>
 </body>
 </html>

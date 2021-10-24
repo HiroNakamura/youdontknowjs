@@ -3,26 +3,36 @@
     <title>Programando en JS</title>
   </head>
 <body>
+  <h1>Calculadora de IMC</h1>
  <div id="contenedor">
+   <h3>Formulario</h3>
      <fieldset>
     <form name="formulario">
    <label for="txtPeso">Peso:</label>
-   <input type="text" value="" name="txtPeso" size="3"/>
+   <input type="range" name="rangoPeso" min="0" max="100" onchange="actualizaTextPeso(this.value);">
+   <input type="text" id="txtPeso" name="txtPeso" value="" size="3"/>kg
    <label for="txtEstatura">Estatura:</label>
-   <input type="text" value="" name="txtEstatura" size="3"/>
-   <input type="button" value="Enviar" onclick="calcularImc();"/>
+   <input type="text" value="" id="txtEstatura" name="txtEstatura" size="3"/>m
+   <input type="button" value="Calcular" title="Calcular IMC" onclick="calcularImc();"/>
  </form>
 </fieldset>
 <label id="imcResultado"></label>
 </div>
 <script>
   const formulario = document.forms.formulario;
- 
+
+  function actualizaTextPeso(val) {
+    document.getElementById('txtPeso').value= val; 
+  }
+
   function operacion(p,e){
-    return Math.ceil(p/Math.pow(e,2.0));
+    return Math.floor(p/Math.pow(e,2.0));
   }
 
   function validacion(){
+    var expr1 = /\b\d\d?\d?\b/;
+    var expr2 = /\b\d.\d?\d?\b/;
+
     if(formulario.txtPeso.value == ""){
       alert("Error: ¡El campo txtPeso no debe estar vacío!");
       return false;
@@ -32,22 +42,37 @@
       alert("Error: ¡El campo txtEstatura no debe estar vacío!");
       return false;
     }
+
+    if(!expr1.test(formulario.txtPeso.value)){
+      alert("Error: ¡La entrada del peso no es válida!");
+      return false;
+    }
+
+    if(!expr2.test(formulario.txtEstatura.value)){
+      alert("Error: ¡La entrada de la estatura no es válida!");
+      return false;
+    }
+
     return true;
+  }
+
+  function limpiar(){
+    formulario.txtPeso.value="";
+    formulario.txtEstatura.value="";
   }
 
   function calcularImc(){
     if(!validacion()){
-      console.log("Debe introducir valores en el formulario")
+      console.log("Debe introducir valores en el formulario");
     }else{
       var txtPeso = formulario.txtPeso.value;
       var txtEstatura = formulario.txtEstatura.value;
       var lblResultado = document.getElementById("imcResultado");
       lblResultado.innerText = "IMC obtenido: "+operacion(parseFloat(txtPeso),parseFloat(txtEstatura));
-      formulario.txtPeso.value="";
-      formulario.txtEstatura.value="";
+      limpiar();
     }
   }
 </script>
-
+<a href="index.html">Regresar</a>
 </body>
 </html>
