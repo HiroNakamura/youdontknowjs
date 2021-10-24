@@ -48,7 +48,7 @@
     obtenerPokemones();*/
 
 
-    const obtenerPokemones = async()=>{
+    /*const obtenerPokemones = async()=>{
       try{
         const res = await fetch('https://pokeapi.co/api/v2/pokemon/');
         const data = await res.json();
@@ -66,7 +66,34 @@
         console.log(error)
       }
     };
-    obtenerPokemones();
+    obtenerPokemones();*/
+
+    const obtenerUsers = async()=>{
+
+      try{
+        //console.log("Probando API...");
+        const res = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await res.json();
+        const arregloNombres = data.map(user => user.name);
+        const contenedor = document.getElementById("contenedor");
+        var resultado ='';
+
+        arregloNombres.forEach(element => {
+          resultado += "Nombre: <font color='orange'>"+element+"</font><br/>";
+          //console.log(`Nombre usuario: ${element}`);
+        });
+
+        contenedor.innerHTML = "Resultado<br/>"+resultado;
+        //console.log("Hecho...");
+      }
+      catch(error){
+        console.log(error)
+      }
+    };
+
+    obtenerUsers();
+
+
 
 
 
