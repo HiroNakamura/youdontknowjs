@@ -68,8 +68,7 @@
     };
     obtenerPokemones();*/
 
-    const obtenerUsers = async()=>{
-
+    /*const obtenerUsers = async()=>{
       try{
         //console.log("Probando API...");
         const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -90,9 +89,26 @@
         console.log(error)
       }
     };
+    obtenerUsers();*/
 
-    obtenerUsers();
-
+    const URL_IMGS = 'https://jsonplaceholder.typicode.com/photos';
+    const obtenerPhotos = async()=>{
+      try{
+        const res = await fetch(URL_IMGS);
+        const data = await res.json();
+        const arregloPhotos = data.map(user => user.thumbnailUrl);
+        const contenedor = document.getElementById("contenedor");
+        var resultado ='';
+        arregloPhotos.forEach(element => {
+          resultado += "<img src='"+element+"'/><br/>";
+        });
+        contenedor.innerHTML = "Resultado:<br/>"+resultado;
+      }
+      catch(error){
+        console.log(error)
+      }
+    };
+    obtenerPhotos();
 
 
 

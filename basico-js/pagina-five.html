@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+ <html lang="es">
+ <head>
+  <meta charset="utf-8"> 
+  <title>Promesas</title>
+</head>
+<body>
+<h1>Promesas</h1>
+<script>
+ //Creamos una Promesa
+ let miPromesa = new Promise( (resolve, reject) =>{
+    var numero = Math.floor(Math.random()*10);
+    if(!numero){
+        reject('Fallo la prueba')
+    }else{
+        resolve(numero)
+    }
+ });
+
+ miPromesa.then( exito =>{
+     console.log(`Resultado: ${exito}`);
+ }).catch(err =>{
+     console.error(`Ha ocurrido un error: ${err}`)
+ });
+
+ let miPromesaX = new Promise((resolve, reject)=>{
+     setTimeout(function(){
+         resolve('Exito: todo funciona bien')
+     },3000);
+ });
+
+ miPromesaX.then(exito=>alert(exito)).catch(err=>alert(err));
+
+</script>
+<a href="index.html">Regresar</a>
+</body>
+</html>
