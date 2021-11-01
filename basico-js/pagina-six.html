@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/formulario.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <aside id= "lateral">
+    <div>
+        <h1 id="titulo">Cadastro de clientes</h1>
+        <p id="subtitulo">Complete com as informações</p><br>
+    </div>
+    <form>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="name"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="name"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+                </imput>
+            </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+        <div class="campo">
+            <label for="email" id="email"><strong>E-mail</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="campo">
+            <label for="telefone" id="telefone"><strong>Telefone</strong></label>
+            <input type="tel" name="telefone" id="telefone" required>
+        </div>
+        </fieldset>         
+
+        <div class="campo">
+            <label for="novidades"><strong>Deseja receber nossas novidades?</strong></label>
+            <input type="radio" name="sim" id="sim" value="sim" checked> Sim
+            <input type="radio" name="não" id="não" value="não" > Não
+        </div>
+
+        <div class="campo">
+            <label for="sexo"><strong>Sexo</strong></label>
+            <select id="sexo">
+                <option selected disabled value>Selecione</option>
+                <option>Feminino</option>
+                <option>Masculino</option>
+            </select>
+        </div>
+
+        <fieldset class="grupo">
+            <div class="check" >
+
+                <label for="serviços" style="margin-left: 1em;"><strong>Tipo de serviços utilizados:</strong></label><br><br>
+            
+               
+                <span style="white-space: nowrap">
+                <input type="checkbox" name="progressiva" id="progressiva" value="progressiva">
+                <label for="progressiva">Escova Progressiva</label></span>
+
+                <span style="white-space: nowrap">
+                <input type="checkbox" name="capilar" id="capilar" value="capilar">
+                <label for="capilar">Tratamento Capilar</label></span>
+
+                <span style="white-space: nowrap">
+                <input type="checkbox" name="escova" id="escova" value="escova">
+                <label for="escova">Escova Simples</label></span>
+
+                <span style="white-space: nowrap">
+                <input type="checkbox" name="manicure" id="manicure" value="manicure">
+                <label for="manicure">Manicure/Pedicure</label></span>
+
+                <span style="white-space: nowrap">
+                <input type="checkbox" name="maquiagem" id="maquiagem" value="maquiagem">
+                <label for="maquiagem">Maquiagem</label></span>
+
+                <span style="white-space: nowrap">
+                <input type="checkbox" name="facial" id="facial" value="facial">
+                <label for="facial">Tratamento Facial</label></span><br>
+
+            </div>
+        </fieldset>
+         
+        <div class="campo">
+            <label for="comentário"><strong>Deixe aqui seu comentário</strong></label>
+            <textarea rows="5" style="width: 10.5cm" id="cometario" name="cometario"></textarea>
+        </div>
+        <button type="submit" class="botão">Finalizar</button>
+    </form>
+</aside>
+<a href="index.html">Regresar</a>
+</body>
+</html>
